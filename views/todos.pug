@@ -1,0 +1,14 @@
+h1 ToDo List
+form(action="/todos", method="GET")
+  input(type="text", name="q")
+  button Search
+hr
+ul
+  each todo in todos
+    li=todo.text
+hr
+h4 Create New Todo
+form(action="/todos/create", method="POST")
+  label new todos:
+  input(type="text", name="todo")
+  button Create
